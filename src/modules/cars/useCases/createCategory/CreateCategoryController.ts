@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import type { CreateCategoryUseCase } from './CreateCategoryUseCase';
+import { CreateCategoryUseCase } from './CreateCategoryUseCase';
 
 class CreateCategoryController {
   constructor(private createCategoryService: CreateCategoryUseCase) {}
