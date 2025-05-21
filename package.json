@@ -6,7 +6,10 @@
    "scripts": {
       "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
       "start": "ts-node src/index.ts",
-      "typeorm": "typeorm-ts-node-commonjs"
+      "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
+      "migration:create": "yarn typeorm migration:create",
+      "migration:run": "yarn typeorm migration:run -- -d ./src/data-source.ts",
+      "migration:revert": "yarn typeorm migration:revert -- -d ./src/data-source.ts"
    },
    "devDependencies": {
       "@types/node": "^22.15.3",

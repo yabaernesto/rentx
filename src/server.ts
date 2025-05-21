@@ -20,7 +20,7 @@ AppDataSource.initialize()
     console.log('📦 Banco de dados conectado com sucesso!');
 
     app.listen(PORT, () =>
-      console.log(`Server is running on port: ${PORT} 🚀`),
+      console.log(`Servidor rodando na porta: ${PORT} 🚀`),
     );
   })
   .catch((error) => {
