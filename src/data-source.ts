@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
-import { User } from './entity/User';
+import { Category } from './modules/cars/entities/Category';
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
@@ -11,7 +11,7 @@ export const AppDataSource = new DataSource({
   database: 'rentx',
   synchronize: true,
   logging: false,
-  entities: [User],
+  entities: [Category],
   migrations: ['./src/database/migrations/*.ts'],
   subscribers: [],
 });
