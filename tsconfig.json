@@ -12,5 +12,21 @@
       "sourceMap": true,
       "resolveJsonModule": true,
       "esModuleInterop": true, // (geralmente necessário junto)
+      // aliases de importações
+      "baseUrl": "./src",
+      "paths": {
+         "@modules/*": [
+            "modules/*"
+         ],
+         "@config/*": [
+            "config/*"
+         ],
+         "@shared/*": [
+            "shared/*"
+         ],
+         "@errors/*": [
+            "errors/*"
+         ],
+      }
    }
 }
