@@ -27,6 +27,9 @@
          "@errors/*": [
             "errors/*"
          ],
+         "@utils/*": [
+            "utils/*"
+         ],
       }
    }
 }
