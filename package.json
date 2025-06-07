@@ -2,6 +2,7 @@
   "name": "rentalx",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "license": "MIT",
   "scripts": {
     "reset": "kill -9 $(lsof -t -i :3333) || true && yarn dev",
@@ -10,7 +11,7 @@
     "migration:create": "yarn typeorm migration:create",
     "migration:run": "yarn typeorm migration:run -- -d ./src/data-source.ts",
     "migration:revert": "yarn typeorm migration:revert -- -d ./src/data-source.ts",
-    "test": "jest"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
   },
   "devDependencies": {
     "@eslint/js": "^9.26.0",

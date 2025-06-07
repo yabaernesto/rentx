@@ -6,13 +6,13 @@
       "target": "es2021",
       "module": "commonjs",
       "moduleResolution": "node",
+      "rootDir": "./",
       "outDir": "./build",
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
       "sourceMap": true,
       "resolveJsonModule": true,
-      "esModuleInterop": true, // (geralmente necessário junto)
-      // aliases de importações
+      "esModuleInterop": true,
       "baseUrl": "./src",
       "paths": {
          "@modules/*": [
@@ -29,7 +29,7 @@
          ],
          "@utils/*": [
             "utils/*"
-         ],
+         ]
       }
    }
 }
