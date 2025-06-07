@@ -3,8 +3,8 @@ import 'reflect-metadata';
 import { AppError } from '@errors/AppError';
 import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
 import { AuthenticateUserUseCase } from './AuthenticateUserUseCase';
-import { CreateUserUseCase } from '../useCases/createUser/CreateUserUseCase';
-import { UsersRepositoryInMemory } from '../repositories/in-memory/UsersRepositoryInMemory';
+import { CreateUserUseCase } from '@modules/accounts/useCases/createUser/CreateUserUseCase';
+import { UsersRepositoryInMemory } from '@modules/accounts/repositories/in-memory/UsersRepositoryInMemory';
 
 describe('Authenticate User', () => {
   let authenticateUseCase: AuthenticateUserUseCase;
