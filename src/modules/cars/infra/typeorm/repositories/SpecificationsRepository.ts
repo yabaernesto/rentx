@@ -4,9 +4,9 @@ import { Specification } from '../../entities/Specification';
 import {
   ICreateSpecificationDTO,
   ISpecificationsRepository,
-} from '../ISpecificationsRepository';
+} from '../../../repositories/ISpecificationsRepository';
 
-import { AppDataSource } from '../../../../data-source';
+import { AppDataSource } from '../../../../../data-source';
 
 class SpecificationsRepository implements ISpecificationsRepository {
   private repository: Repository<Specification>;

@@ -1,9 +1,9 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 
-import { Category } from './modules/cars/entities/Category';
-import { Specification } from './modules/cars/entities/Specification';
-import { User } from './modules/accounts/entities/User';
+import { User } from '@modules/accounts/infra/typeorm/entities/User';
+import { Category } from '@modules/cars/infra/typeorm/entities/Category';
+import { Specification } from '@modules/cars/infra/typeorm/entities/Specification';
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
@@ -15,6 +15,6 @@ export const AppDataSource = new DataSource({
   synchronize: true,
   logging: false,
   entities: [Category, Specification, User],
-  migrations: ['./src/database/migrations/*.ts'],
+  migrations: ['./src/shared/infra/typeorm/migrations/*.ts'],
   subscribers: [],
 });

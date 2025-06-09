@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 
-import { AppError } from '@errors/AppError';
+import { AppError } from '@shared/errors/AppError';
 import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
 import { AuthenticateUserUseCase } from './AuthenticateUserUseCase';
 import { CreateUserUseCase } from '@modules/accounts/useCases/createUser/CreateUserUseCase';
