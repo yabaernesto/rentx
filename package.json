@@ -2,7 +2,6 @@
   "name": "rentalx",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "license": "MIT",
   "scripts": {
     "reset": "kill -9 $(lsof -t -i :3333) || true && yarn dev",
