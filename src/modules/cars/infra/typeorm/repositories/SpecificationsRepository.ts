@@ -4,7 +4,7 @@ import { Specification } from '@modules/cars/infra/typeorm/entities/Specificatio
 import {
   ICreateSpecificationDTO,
   ISpecificationsRepository,
-} from '../../../repositories/ISpecificationsRepository';
+} from '@modules/cars/repositories/ISpecificationsRepository';
 
 import { AppDataSource } from '../../../../../data-source';
 
