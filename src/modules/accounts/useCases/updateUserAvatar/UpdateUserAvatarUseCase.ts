@@ -1,6 +1,6 @@
 import { inject, injectable } from 'tsyringe';
 
-import { deleFile } from '@utils/file';
+import { deleteFile } from '@utils/file';
 import { IUsersRepository } from '@modules/accounts/repositories/IUsersRepository';
 
 interface IRquest {
@@ -19,7 +19,7 @@ class UpdateUserAvatarUseCase {
     const user = await this.usersRepository.findById(userId);
 
     if (user.avatar) {
-      await deleFile(`./tmp/avatar/${user.avatar}`);
+      await deleteFile(`./tmp/avatar/${user.avatar}`);
     }
     user.avatar = avatarFile;
 
