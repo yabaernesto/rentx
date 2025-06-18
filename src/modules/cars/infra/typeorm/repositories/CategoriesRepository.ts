@@ -6,7 +6,7 @@ import {
   ICreateCategoryDTO,
 } from '../../../repositories/ICategoriesRepository';
 
-import { AppDataSource } from '../../../../../data-source';
+import { AppDataSource } from 'data-source';
 
 class CategoriesRepository implements ICategoriesRepository {
   private repository: Repository<Category>;
@@ -33,7 +33,11 @@ class CategoriesRepository implements ICategoriesRepository {
   }
 
   async findByName(name: string): Promise<Category | undefined> {
-    const category = await this.repository.findOne({ where: { name } });
+    const category = await this.repository.findOne({
+      where: {
+        name,
+      },
+    });
     return category;
   }
 }

@@ -6,7 +6,7 @@ import {
   ISpecificationsRepository,
 } from '@modules/cars/repositories/ISpecificationsRepository';
 
-import { AppDataSource } from '../../../../../data-source';
+import { AppDataSource } from 'data-source';
 
 class SpecificationsRepository implements ISpecificationsRepository {
   private repository: Repository<Specification>;
